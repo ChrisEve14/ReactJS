@@ -1,3 +1,36 @@
 .Navbar {
-    background-color: silver;
+    background-color: black;
+    font-size: 50px;
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+}
+
+.Title{
+   padding-right: 35%;
+}
+
+.Buttons{
+    display: flex;
+    padding: 10px;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+.Button{
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+button:hover{ 
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+
 }

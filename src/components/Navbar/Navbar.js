@@ -3,18 +3,18 @@ import './Navbar.css'
 const Navbar = () => {
     return(
         <nav className='Navbar'>
-            <div>
+            <div className='Title'>
                 Wine & Palette 
             </div>
-            <div>
-                <button>
-                    Red Wine
+            <div className='Buttons'>
+                <button className='Button'>
+                    Winery
                 </button>
-                <button>
-                    White
+                <button className='Button'>
+                    Art Gallery
                 </button>
-                <button>
-                    Rose
+                <button className='Button'>
+                    Grapevine Glamping
                 </button>
             </div>
         </nav>
