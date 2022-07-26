@@ -1,5 +1,4 @@
 .Navbar {
-    background-color: white;
     font-size: 50px;
     display: flex;
     padding: 10px;
@@ -10,7 +9,7 @@
 }
 
 .Title{
-   padding-right: 35%;
+   padding-right: 15%;
    color: black;
 }
 
@@ -29,7 +28,7 @@
     
 }
 
-button:hover{ 
+.Button:hover{ 
     background-color: black;
     color: white;
 

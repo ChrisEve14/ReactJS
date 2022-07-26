@@ -22,8 +22,8 @@ const Counter = ({ show, stock, initial, onAdd }) => {
     }
     console.log('va a renderizar');
     return (
-        <div>
-            <p style={{color: "white" , fontSize: 50}}>{count}</p>
+        <div style={{marginBottom: '30px'}}>
+            <p style={{color: "black" , fontSize: 50}}>{count}</p>
             <button onClick={decrement} style={{fontSize: 50}}>-</button>
             <button onClick={() => onAdd(count)} style={{fontSize: 50}}>Add to Cart</button>
             <button onClick={increment} style={{fontSize: 50}}>+</button>
