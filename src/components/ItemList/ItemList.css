@@ -1,0 +1,4 @@
+.ListCard{
+    display: flex;
+    flex-direction: row;
+}

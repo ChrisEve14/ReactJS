@@ -7,9 +7,11 @@
     overflow: hidden;
     cursor: pointer;
     margin: 10px;
-    display: block;
+    display:block;
     margin-left: auto;
     margin-right: auto;
+    padding: 15px;
+   
 }
 
 .cardProduct:hover{
@@ -17,7 +19,7 @@
 }
 
 .itemImg{
-    width: 300px;
+    width: 200px;
 }
 
 .itemName{

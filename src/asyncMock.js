@@ -3,7 +3,7 @@ const products = [{
         name: 'Red Wine',
         price: 50,
         category: 'Red Wine',
-        img: 'https://expertreviews.b-cdn.net/sites/expertreviews/files/styles/er_main_wide/public/2021/07/best_red_wine_lead.jpg?itok=AxuG20uy',
+        img: 'https://thelordfather.com/wp-content/uploads/2021/08/Wine-Web-2.jpg',
         stock: 5,
         description: 'Red Blossom'
     },
