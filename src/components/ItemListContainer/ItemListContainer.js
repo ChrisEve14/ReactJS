@@ -3,6 +3,7 @@ import { getProducts } from "../../asyncMock"
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css';
 
+
 const ItemListContainer = (props) => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
@@ -25,8 +26,9 @@ const ItemListContainer = (props) => {
 
     return(
         <>
-        <h1 style={{color: "black"}} >{props.greeting}</h1>
+        <h1 className="Greeting" >{props.greeting}</h1>
         <ItemList products={products} />
+
         </>
 
     )

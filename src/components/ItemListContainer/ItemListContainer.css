@@ -35,3 +35,10 @@
     0% , 50%{ box-shadow: 0 0  inset }
     100% { box-shadow: 0 -20px inset }
   }
+
+
+.Greeting{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: black;
+  font-size: 50px;
+}

@@ -1,0 +1,27 @@
+.CardItem {
+    width: 500px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+    background-color:lightgoldenrodyellow;
+    border: 7px groove #e1e1e1;
+    border-radius: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.ItemHeader {
+    display: flex;
+    justify-content: center;
+}
+
+.Info {
+    font-size: 15px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.ItemImg {
+    width: 300px;
+    object-fit: cover;
+    object-position: center;
+}

@@ -4,7 +4,7 @@ const products = [{
         price: 50,
         category: 'Red Wine',
         img: 'https://expertreviews.b-cdn.net/sites/expertreviews/files/styles/er_main_wide/public/2021/07/best_red_wine_lead.jpg?itok=AxuG20uy',
-        stock: 30,
+        stock: 5,
         description: 'Red Blossom'
     },
 
@@ -14,18 +14,18 @@ const products = [{
         price: 45,
         category: 'White Wine',
         img: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/02/14/18/istock-1147260427.jpg?width=1200',
-        stock: 30,
+        stock: 10,
         description: 'White Blossom'
     },
 
     {
         id: '3',
-        name: 'Rose Wine',
+        name: 'Rosé Wine',
         price: 47,
-        category: 'Rose Wine',
+        category: 'Rosé Wine',
         img: 'https://carpe-travel.com/wp-content/uploads/2020/06/rose-scaled.jpg',
-        stock: 30,
-        description: 'Rose Blossom'
+        stock: 7,
+        description: 'Rosé Blossom'
     },
 
 ]
@@ -35,5 +35,13 @@ export const getProducts = () => {
         setTimeout(() => {
             resolve(products)
         }, 3000)
+    })
+}
+
+export const getProductById = (id) => {
+    return new Promise (resolve => {
+        setTimeout(() => {
+            resolve(products.find(prod => prod.id === id))
+        }, 500)
     })
 }

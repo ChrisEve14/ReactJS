@@ -5,8 +5,8 @@ const Item = ({product}) => {
         <>
             <div className='cardProduct'>
                 <img  alt="Wine" className='itemImg' src={product.img}/>
-                <span className='itemName' key={product.id} >{product.name}</span>
-                <span className='itemPrice' key={product.id} >${product.price}</span>
+                <span className='itemName' >{product.name}</span>
+                <span className='itemPrice' >${product.price}</span>
             </div>
         </>
     )

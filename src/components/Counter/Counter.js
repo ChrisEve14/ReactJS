@@ -1,34 +1,35 @@
-import {useState, useEffect } from 'react'
+import './Counter.css'
+import {useState} from 'react'
 
-const Counter = ({ show, stock, initial, onAdd }) => {
-    const [count, setCount] = useState(0)
 
-    useEffect(() =>{
-        console.log('function callback useEffect');
-
-        return () => console.log('el componenete va a desmontarse');
-    }, [show])
-
-    const decrement = () => {
-        if(count > initial) {
-            setCount(count - 1)
-        }
-    }
-
+const Counter = ({stock = 0, initial = 1, onAdd})=> {
+    const [quantity, setQuantity] = useState(initial)
+ 
     const increment = () => {
-        if(count < stock) {
-            setCount(count + 1)
+        if(quantity < stock) {
+            setQuantity(quantity+1)
         }
     }
-    console.log('va a renderizar');
-    return (
-        <div style={{marginBottom: '30px'}}>
-            <p style={{color: "black" , fontSize: 50}}>{count}</p>
-            <button onClick={decrement} style={{fontSize: 50}}>-</button>
-            <button onClick={() => onAdd(count)} style={{fontSize: 50}}>Add to Cart</button>
-            <button onClick={increment} style={{fontSize: 50}}>+</button>
+ 
+    const decrement = () => {
+        if(quantity > 1) {
+            setQuantity(quantity - 1)
+        }     
+    }
+ 
+    return(
+        <div className='Counter'>          
+             <div className='Controls'>
+                 <button className="Cart" onClick={decrement}>-</button>
+                 <h4 className='Number'>{quantity}</h4>
+                 <button className="Cart" onClick={increment}>+</button>
+             </div>
+             <div>
+                 <button className="Cart" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
+             </div>
         </div>
     )
-}
+ 
+ }
 
 export default Counter

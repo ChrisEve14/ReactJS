@@ -1,5 +1,6 @@
 .Navbar {
     font-size: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
     padding: 10px;
     flex-direction: row;

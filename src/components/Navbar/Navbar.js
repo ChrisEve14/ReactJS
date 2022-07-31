@@ -11,13 +11,13 @@ const Navbar = () => {
             </div>
             <div className='Buttons'>
                 <button className='Button'>
-                    Winery
+                    Red Wine
                 </button>
                 <button className='Button'>
-                    Art Gallery
+                    White Wine
                 </button>
                 <button className='Button'>
-                    Grapevine Glamping
+                Rosé Wine
                 </button>
             </div>
             <CartWidget />
