@@ -1,7 +1,6 @@
 import './ItemDetail.css'
 import Counter from '../Counter/Counter'
 
-
 const ItemDetail = ({id, name, img, category, description, price, stock }) => {
 
     const handleOnAdd = (quantity) => {
@@ -31,7 +30,6 @@ const ItemDetail = ({id, name, img, category, description, price, stock }) => {
         </section>
         <footer className='ItemFooter'>
             <Counter stock={stock} onAdd={handleOnAdd} />
-            {/* <Counter show={show} stock={10} initial={1} onAdd={handleOnAdd}/> */}
         </footer>
       </article>
     )

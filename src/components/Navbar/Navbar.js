@@ -1,24 +1,25 @@
 import './Navbar.css'
 import CartWidget from '../CartWidget/CartWidget'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
     return(
         <nav className='Navbar'>
             <div className='Title'>
-                Wine & Palette 
-                <img style={{width: "50px"}} src='./images/wine.png' alt="wine" />
-                <img style={{width: "50px"}} src='./images/palette.png' alt="palette" />
+               <Link to='/' className='Title'> Wine & Palette </Link>
+                <img className='Icons' src='./images/wine.png' alt="wine" />
+                <img className='Icons' src='./images/palette.png' alt="palette" />
             </div>
             <div className='Buttons'>
-                <button className='Button'>
+                <Link to='/category/red' className='Button'>
                     Red Wine
-                </button>
-                <button className='Button'>
+                </Link>
+                <Link to='/category/white' className='Button'>
                     White Wine
-                </button>
-                <button className='Button'>
+                </Link>
+                <Link to='/category/rose' className='Button'>
                 Rosé Wine
-                </button>
+                </Link>
             </div>
             <CartWidget />
         </nav>

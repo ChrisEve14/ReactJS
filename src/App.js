@@ -1,17 +1,20 @@
 import './App.css';
-import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
-  const [show, setShow] = useState(true)
-
   return (
     <div className="App">
+      <BrowserRouter>
         <Navbar />
-        <ItemListContainer show={show} setShow={setShow} greeting='Welcome to Wine & Palette '/>
-        <ItemDetailContainer />
+        <Routes>
+          <Route path='/' element={<ItemListContainer greeting='Welcome to Wine & Palette '/>}/>
+          <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+          <Route path='/detail/:productId' element={<ItemDetailContainer />}/>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

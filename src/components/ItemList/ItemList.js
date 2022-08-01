@@ -6,9 +6,7 @@ const ItemList = ( { products }) => {
     return(
         
         <div className="ListCard">
-            {products.map( product =>(
-            <Item key={product.id} product={product}/>
-            ))}
+            {products.map( prod => <Item key={prod.id} {...prod}/>)}
         </div>
     )
 }
