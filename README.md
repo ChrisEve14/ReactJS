@@ -29,5 +29,3 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## GIF
 
 [Winery GIF](https://www.canva.com/design/DAFIT2XcqaI/22CZfuUoXjGDGt3OvFkz0g/watch?utm_content=DAFIT2XcqaI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
-
-

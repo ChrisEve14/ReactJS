@@ -1,9 +1,9 @@
 import './Counter.css'
 import {useState} from 'react'
 
-
-const Counter = ({stock = 0, initial = 1, onAdd})=> {
-    const [quantity, setQuantity] = useState(initial)
+const Counter = ({onConfirm, stock, initial= 1}) => {
+    
+   const [quantity, setQuantity] = useState(initial) 
  
     const increment = () => {
         if(quantity < stock) {
@@ -25,7 +25,7 @@ const Counter = ({stock = 0, initial = 1, onAdd})=> {
                  <button className="Cart" onClick={increment}>+</button>
              </div>
              <div>
-                 <button className="Cart" onClick={() => onAdd(quantity)}>Agregar al carrito</button>
+                 <button className="Cart" onClick={() => onConfirm(quantity)}>Add to Cart</button>
              </div>
         </div>
     )

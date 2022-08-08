@@ -1,10 +1,17 @@
 import './ItemDetail.css'
+import { useState } from 'react'
 import Counter from '../Counter/Counter'
+import { Link } from 'react-router-dom'
+
+
 
 const ItemDetail = ({id, name, img, category, description, price, stock }) => {
 
+    const [quantity, setQuantity] = useState(0)
+
     const handleOnAdd = (quantity) => {
-        alert(`Items Added ${quantity}`);
+        console.log(`Items Added ${quantity}`);
+        setQuantity(quantity)
     }
 
     return(
@@ -29,7 +36,8 @@ const ItemDetail = ({id, name, img, category, description, price, stock }) => {
             </p>
         </section>
         <footer className='ItemFooter'>
-            <Counter stock={stock} onAdd={handleOnAdd} />
+            {quantity > 0 ? < Link to ='/cart'>Check Out</Link> : <Counter stock={stock} onConfirm={handleOnAdd}/>}
+            {/* <Counter stock={stock} onAdd={handleOnAdd} /> */}
         </footer>
       </article>
     )

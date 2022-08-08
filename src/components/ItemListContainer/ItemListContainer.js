@@ -23,6 +23,15 @@ const ItemListContainer = ({greeting}) => {
         })
     }, [categoryId])
 
+    useEffect(() => {
+        const onResize = () => console.log('cambio el tamaño de ventana')
+
+        window.addEventListener('resize', onResize)
+
+        return () => window.removeEventListener('resize', onResize)
+    }, [])
+    
+
     if (loading) {
         return <span className="loader"></span>
         // <h1 style={{color: "black"}}>Uploading Products...</h1>
