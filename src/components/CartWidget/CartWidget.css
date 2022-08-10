@@ -1,0 +1,13 @@
+.CartWidget {
+    padding: 15px;
+    font-size: 20px;
+    background: lightgoldenrodyellow;
+    border: 7px groove #e1e1e1;
+    border-radius: 10px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    cursor: pointer;
+}
