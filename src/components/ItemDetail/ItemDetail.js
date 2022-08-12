@@ -41,8 +41,8 @@ const ItemDetail = ({id, name, img, category, description, price, stock }) => {
                 Price: {price}
             </p>
         </section>
-        <footer className='ItemFooter'>
-            {quantity > 0 ? < Link to ='/cart'>Check Out</Link> : <Counter stock={stock} onConfirm={handleOnAdd} initial={quantityAdded}/>}
+        <footer>
+            {quantity > 0 ? < Link to ='/cart' className='ItemFooter'>Check Out</Link> : <Counter stock={stock} onConfirm={handleOnAdd} initial={quantityAdded}/>}
             {/* <Counter stock={stock} onAdd={handleOnAdd} /> */}
         </footer>
       </article>

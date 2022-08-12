@@ -25,3 +25,27 @@
     object-fit: cover;
     object-position: center;
 }
+
+.ItemFooter{
+    text-decoration: none;
+    border-radius: 25;
+    margin: 0 30px;
+    width: auto;
+    padding: 12px;
+    font-size: 8px;
+    background-color:black;
+    border-radius: 8px;
+    display: flex;
+    align-self: center;
+    flex-grow: 0;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #FFFFFF;
+    border: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
