@@ -3,14 +3,24 @@ import { useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { addDoc, collection, Timestamp, getDocs, query, where, documentId, writeBatch } from 'firebase/firestore'
 import { db } from '../../services/firebase/index'
+import Swal from 'sweetalert2'
 
 
 const Checkout = () => {
+    const [purchased, setPurchased] = useState(0)
     const { cart, clearCart, total } = useContext(CartContext)
-
+    const [orderN, setOrderN] = useState("")
     const [name, setName] = useState("");
     const [phone, setPhone] = useState(0);
     const [mail, setMail] = useState("");
+
+    if (purchased === 1){
+        return(  
+            <div>
+                <h1>Thanks for shopping with us, {name}!</h1>
+                <h2>Your order number is: #{orderN}</h2>
+            </div>)
+    }
     
     const order = async () => {
         try{
@@ -62,14 +72,18 @@ const Checkout = () => {
                 batch.commit()
                 console.log(orderCreated.id);
                 clearCart()
+                setOrderN(orderCreated.id)
+                setPurchased(1)
             } else {
-                console.log('Products out of stock');
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops... Something went wrong!',
+                    text: 'One of the items you are trying to buy is out of stock',
+                  })
             }
         } catch (error) {
             console.log(error);
-        } finally {
-            console.log('Item bought successfully');
-        }
+            }
     }
 
     return (
@@ -94,8 +108,8 @@ const Checkout = () => {
                     onChange={(e) => {setPhone(e.target.value);}}
                     />
                     </label>
-                    <button type="submit" className="Button" onClick={order}>Buy</button>
             </form>
+            <button type="submit" className="Button" onClick={order}>Buy</button>
         </div>
     )
 
