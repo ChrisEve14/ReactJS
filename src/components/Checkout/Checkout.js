@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { useState } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { addDoc, collection, Timestamp, getDocs, query, where, documentId, writeBatch } from 'firebase/firestore'
 import { db } from '../../services/firebase/index'
@@ -7,20 +8,24 @@ import { db } from '../../services/firebase/index'
 const Checkout = () => {
     const { cart, clearCart, total } = useContext(CartContext)
 
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState(0);
+    const [mail, setMail] = useState("");
+    
     const order = async () => {
         try{
             const orderDetail = {
                 buyer: {
-                    name: 'Eve',
-                    phone: '1234567',
-                    email: 'eve@eve.com'
+                    name: name,
+                    phone: phone,
+                    email: mail,
                 },
                 items: cart,
-                total,
+                total: `${total}`,
                 date: Timestamp.fromDate(new Date())
             }
 
-            addDoc(collection(db, 'orders'), orderDetail)
+            console.log(orderDetail);
 
             const identifications = cart.map(prod => prod.id)
 
@@ -40,6 +45,9 @@ const Checkout = () => {
 
                 const prodAdded = cart.find(prod => prod.id === doc.id)
                 const prodQ = prodAdded?.quantity
+
+                console.log(prodAdded);
+                console.log(prodQ);
 
                 if(stockDb >= prodQ){
                     batch.update(doc.ref, {stock: stockDb - prodQ})
@@ -67,8 +75,27 @@ const Checkout = () => {
     return (
         <div>
             <h1>Make sure you buy it before someone else does</h1>
-            <form></form>
-            <button className="Button" onClick={order}>Buy</button>
+            <form>
+                <label>Name:
+                <input 
+                    type="text" 
+                    onChange={(e) => {setName(e.target.value);}}
+                />
+                </label>
+                <label>Email:
+                <input 
+                    type="text"  
+                    onChange={(e) => {setMail(e.target.value);}}
+                />
+                </label>
+                <label>Phone:
+                    <input 
+                    type="number" 
+                    onChange={(e) => {setPhone(e.target.value);}}
+                    />
+                    </label>
+                    <button type="submit" className="Button" onClick={order}>Buy</button>
+            </form>
         </div>
     )
 
