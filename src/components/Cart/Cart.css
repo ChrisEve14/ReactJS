@@ -1,6 +1,16 @@
-.Button{
+.cartText{
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.totalText{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 25px;
+}
+
+.cartBtt{
     padding: 15px;
-    font-size: 20px;
+    font-size: 21px;
     background: lightgoldenrodyellow;
     border: 7px groove #e1e1e1;
     border-radius: 10px;
@@ -9,4 +19,12 @@
     align-items: center;
     text-decoration: none;
     cursor: pointer;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+
+.cartBtt:hover{ 
+    background-color: black;
+    color: white;
 }

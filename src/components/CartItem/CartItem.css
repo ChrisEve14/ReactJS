@@ -22,19 +22,25 @@
 .ItemHeaderCartItem {
     display: flex;
     justify-content: space-between;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    font-size: 17px;
 }
 
 .InfoCartItem {
     font-size: 12px;
     display: flex;
     justify-content: space-between;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    font-size: 17px;
 }
 
 .ButtonCartItem {
     width: auto;
     padding: 12px;
-    font-size: 8px;
-    background: black;
+    font-size: 12px;
+    background: lightgoldenrodyellow;
     border-radius: 8px;
     flex: none;
     display: flex;
@@ -45,10 +51,15 @@
     align-items: center;
     text-decoration: none;
     color: #FFFFFF;
-    border: none;
-    border-style: none;
+    border: 5px groove #e1e1e1;
+    color:black;
+    font-weight: bolder;
     cursor: pointer;
     outline: inherit;
+}
+
+.ButtonCartItem:hover{
+    background-color:silver;
 }
 
 .ItemFooterCartItem {

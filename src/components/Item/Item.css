@@ -1,6 +1,6 @@
 .cardProduct{
     position: relative;
-    width: 330px;
+    width: 350px;
     border-radius: 5px;
     overflow: hidden;
     margin: 10px;
@@ -29,9 +29,11 @@
 }
 
 .itemPrice{
-    font-size: 15px;
+    font-size: 20px;
     display: flex;
     justify-content: space-around;
+    margin: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .Det{
@@ -39,10 +41,14 @@
     font-size: 20px;
     text-decoration: none;
     cursor: pointer;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color:lightgoldenrodyellow;
+    border: 7px groove #e1e1e1;
+    border-radius: 10px;
+    margin: 15px;
 }
 
 .Det:hover{
-    color: black;
-    opacity: 0.5;
-    cursor: pointer;
+    color: white;
+    background-color: black;
 }

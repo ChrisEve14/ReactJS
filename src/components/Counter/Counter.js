@@ -19,7 +19,7 @@ const Counter = ({onConfirm, stock, initial= 1}) => {
  
     return(
         <div className='Counter'>          
-             <div className='Controls'>
+             <div className='divCounter'>
                  <button className="Cart" onClick={decrement}>-</button>
                  <h4 className='Number'>{quantity}</h4>
                  <button className="Cart" onClick={increment}>+</button>

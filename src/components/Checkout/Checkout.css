@@ -1,38 +1,30 @@
-.CardItem {
-    width: 500px;
-    padding: 10px;
-    margin: 10px;
-    font-size: 20px;
-    background-color:lightgoldenrodyellow;
-    border: 7px groove #e1e1e1;
-    border-radius: 10px;
+.TextC{
+    font-size: 35px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.ItemHeader {
-    display: flex;
-    justify-content: center;
-}
-
-.Info {
-    font-size: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.ItemImg {
-    width: 300px;
-    object-fit: cover;
-    object-position: center;
-}
-
-.ItemCheck{
+.InputC{
     padding: 15px;
-    font-size: 20px;
+    margin: 5px;
+    font-size: 21px;
+    background: lightgoldenrodyellow;
+    width: fit-content;
+    border: 7px groove #e1e1e1;
+    border-radius: 10px;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.BuyButton{
+    padding: 15px;
+    font-size: 21px;
     background: lightgoldenrodyellow;
     border: 7px groove #e1e1e1;
     border-radius: 10px;
-    display: flex;
     align-self: center;
     justify-content: center;
     align-items: center;
@@ -42,7 +34,7 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.ItemCheck:hover{
+.BuyButton:hover{
     background-color: black;
     color: white;
 }

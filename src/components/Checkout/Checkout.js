@@ -1,3 +1,4 @@
+import './Checkout.css'
 import { useContext } from "react"
 import { useState } from 'react'
 import { CartContext } from '../../context/CartContext'
@@ -17,8 +18,8 @@ const Checkout = () => {
     if (purchased === 1){
         return(  
             <div>
-                <h1>Thanks for shopping with us, {name}!</h1>
-                <h2>Your order number is: #{orderN}</h2>
+                <h1 className="TextC">Thanks for shopping with us, {name}!</h1>
+                <h2 className="TextC">Your order number is: #{orderN}</h2>
             </div>)
     }
     
@@ -88,28 +89,31 @@ const Checkout = () => {
 
     return (
         <div>
-            <h1>Make sure you buy it before someone else does</h1>
+            <h1 className="TextC">Make sure you buy it before someone else does</h1>
             <form>
-                <label>Name:
+                <label className="InputC">Name:
                 <input 
+                    className="InputC"
                     type="text" 
                     onChange={(e) => {setName(e.target.value);}}
                 />
                 </label>
-                <label>Email:
+                <label className="InputC">Email:
                 <input 
+                    className="InputC"
                     type="text"  
                     onChange={(e) => {setMail(e.target.value);}}
                 />
-                </label>
-                <label>Phone:
+                </label >
+                <label className="InputC">Phone:
                     <input 
+                    className="InputC"
                     type="number" 
                     onChange={(e) => {setPhone(e.target.value);}}
                     />
                     </label>
             </form>
-            <button type="submit" className="Button" onClick={order}>Buy</button>
+            <button type="submit" className="BuyButton" onClick={order}>Buy</button>
         </div>
     )
 
