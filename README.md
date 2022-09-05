@@ -40,4 +40,6 @@ It has an easy interface with simple interactions for the customer to understand
 
 [Winery GIF](https://www.canva.com/design/DAFLTiDtpv8/VLafIQoe-iqriZ-kOoTxUQ/watch?utm_content=DAFLTiDtpv8&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu)
 
+## Wine & Palette Site
+
 [Site Deployed with Netlify](https://wineandpalette.netlify.app/)
