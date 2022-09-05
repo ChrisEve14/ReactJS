@@ -32,18 +32,14 @@ const ItemDetail = ({id, name, img, category, description, price, stock }) => {
         </picture>
         <section>
             <p className="Info">
-                Category: {category}
+                {description}
             </p>
-            <p className="Info">
-                Description: {description}
-            </p>
-            <p className="Info">
-                Price: {price}
+            <p className="InfoP">
+              $  {price}
             </p>
         </section>
         <footer>
             {quantity > 0 ? < Link to ='/cart' className='ItemCheck'>Check Out</Link> : <Counter stock={stock} onConfirm={handleOnAdd} initial={quantityAdded}/>}
-            {/* <Counter stock={stock} onAdd={handleOnAdd} /> */}
         </footer>
       </article>
     )

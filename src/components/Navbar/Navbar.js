@@ -12,13 +12,13 @@ const Navbar = () => {
             </div>
             <div className='Buttons'>
                 <Link to='/category/red' className='Button'>
-                    Red Wine
+                    Red 
                 </Link>
                 <Link to='/category/white' className='Button'>
-                    White Wine
+                    White 
                 </Link>
                 <Link to='/category/rose' className='Button'>
-                Rosé Wine
+                Rosé 
                 </Link>
             </div>
             <CartWidget />

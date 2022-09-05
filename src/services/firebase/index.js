@@ -2,12 +2,12 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAgB0_DYq-U9fab_BRhZcs8UKxokWJfRZg",
-  authDomain: "wineandpalette-7e2b9.firebaseapp.com",
-  projectId: "wineandpalette-7e2b9",
-  storageBucket: "wineandpalette-7e2b9.appspot.com",
-  messagingSenderId: "51784300941",
-  appId: "1:51784300941:web:4c60472bae75e4c1a4e5c4"
+  apiKey: process.env.REACT_APP_apiKey ,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 

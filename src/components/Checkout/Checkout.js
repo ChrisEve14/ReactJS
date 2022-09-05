@@ -32,7 +32,7 @@ const Checkout = () => {
                     email: mail,
                 },
                 items: cart,
-                total: `${total}`,
+                total: total,
                 date: Timestamp.fromDate(new Date())
             }
 
@@ -62,6 +62,7 @@ const Checkout = () => {
 
                 if(stockDb >= prodQ){
                     batch.update(doc.ref, {stock: stockDb - prodQ})
+                    console.log(batch.update);
                 } else {
                     noStock.push ({ id: doc.id, ...dataDoc})
                 }

@@ -1,31 +1,27 @@
 import './Counter.css'
 import {useState} from 'react'
 
-const Counter = ({onConfirm, stock, initial= 1}) => {
-    
-   const [quantity, setQuantity] = useState(initial) 
+const Counter = ({onConfirm, stock, initial=1}) => {
+
+    const [quantity, setQuantity] = useState(initial) 
  
     const increment = () => {
-        if(quantity < stock) {
-            setQuantity(quantity+1)
-        }
+        quantity < stock && setQuantity(quantity + 1);
     }
  
     const decrement = () => {
-        if(quantity > 1) {
-            setQuantity(quantity - 1)
-        }     
+        quantity > 0 && setQuantity(quantity - 1); 
     }
- 
+        
     return(
         <div className='Counter'>          
              <div className='divCounter'>
-                 <button className="Cart" onClick={decrement}>-</button>
+                 <button className="Cart" onClick={decrement} disabled={quantity === 0 ? true : null}>-</button>
                  <h4 className='Number'>{quantity}</h4>
-                 <button className="Cart" onClick={increment}>+</button>
+                 <button className="Cart" onClick={increment} disabled={quantity === stock ? true : null}>+</button>
              </div>
              <div>
-                 <button className="Cart" onClick={() => onConfirm(quantity)}>Add to Cart</button>
+                 <button className="Cart" onClick={() => onConfirm(quantity)}  disabled={stock === 0 || quantity === 0 ? true : null}>Add to Cart</button>
              </div>
         </div>
     )

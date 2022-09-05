@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-// import { getProducts, getProductsByCategory } from "../../asyncMock"
 import ItemList from '../ItemList/ItemList'
 import './ItemListContainer.css';
 import { useParams } from 'react-router-dom'
@@ -20,7 +19,6 @@ const ItemListContainer = ({greeting}) => {
         : query(collection(db, 'products'), where('category', '==', categoryId))
 
         getDocs(collectionReference).then(response =>{
-            // console.log(response);
             const products = response.docs.map(doc => {
                 const values = doc.data()
                 return {id: doc.id, ...values}
@@ -31,16 +29,7 @@ const ItemListContainer = ({greeting}) => {
             console.log(error);
         }).finally(()=>{
             setLoading(false)
-    })
-        // const asyncFunction = categoryId ? getProductsByCategory : getProducts
-        
-        // asyncFunction(categoryId).then(response => {
-        //     setProducts(response);
-        // }).catch(error => {
-        //     console.log(error)
-        // }).finally(() =>{
-        //     setLoading(false)
-        // })
+        })
     }, [categoryId])
 
     useEffect(() => {
@@ -54,7 +43,6 @@ const ItemListContainer = ({greeting}) => {
 
     if (loading) {
         return <span className="loader"></span>
-        // <h1 style={{color: "black"}}>Uploading Products...</h1>
     }
 
 
