@@ -3,9 +3,8 @@ const products = [{
         name: 'Red Wine',
         price: 50,
         category: 'red',
-        img: 'https://plenilunia.com/wp-content/uploads/2014/07/Depositphotos_15742457_original-562x374.jpg',
         // img: 'https://thelordfather.com/wp-content/uploads/2021/08/Wine-Web-2.jpg',
-        // img: 'https://media.istockphoto.com/id/482533989/photo/pouring-red-wine.jpg?s=612x612&w=0&k=20&c=aAILeGYRvtWMBbdWN--pGuBcIvsd7WvKophjMU6Jd8c=',
+        img: 'https://media.istockphoto.com/id/482533989/photo/pouring-red-wine.jpg?s=612x612&w=0&k=20&c=aAILeGYRvtWMBbdWN--pGuBcIvsd7WvKophjMU6Jd8c=',
         stock: 5,
         description: 'Red Blossom'
     },
