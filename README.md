@@ -1,45 +1,39 @@
-# Winery Ecommerce 
+# Wine & Palette 🍷
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An e-commerce web application built as the final project for the React JS course at Coderhouse.
 
-This Ecommerce is a prototype for a small wine business in which you can simulate a purchase with an order number and a form with the buyer's information that is saved to firestore. 
-It has an easy interface with simple interactions for the customer to understand and surf the web without any problem. 
+## 🌐 Live Demo
+[https://wineandpalette.netlify.app/](https://wineandpalette.netlify.app/)
 
-## You can run this project with the following commands:
+## 🎬 Preview
+![Wine & Palette Demo](gif%20winery.gif)
 
-* $ git clone https://github.com/ChrisEve14/ReactJS.git
-* $ cd ReactJS
-* $ npm install
-* $ npm start
+## 📖 About
+Wine & Palette is a fully functional wine store prototype where users can browse a product catalog, view item details, add products to the cart, and complete a simulated purchase. Order information is saved to Firebase Firestore and the user receives a unique order ID upon checkout.
 
-## Libraries 
-* Node.JS & npm
-* Create-React-App
-* React-Router-Dom
+## 🛠️ Built With
+- React.js
+- React Router DOM
+- Firebase & Firestore
+- CSS3
 
-## Components Used
-* Navbar
-* ItemListContainer
-* ItemList
-* Item
-* ItemDetailContainer
-* ItemDetail
-* Counter
-* CartWidget
-* CartItem
-* Cart
-* Checkout
+## ✨ Features
+- Product catalog with category filtering
+- Item detail page
+- Shopping cart with quantity management
+- Checkout form with order confirmation
+- Order stored in Firestore with unique order ID
 
-## Context
-* CartContext
+## 📁 Project Structure
+- `src/components/` — Reusable React components
+- `src/context/` — CartContext for global state management
+- `src/services/` — Firebase configuration and Firestore integration
 
-## Services
-* Firebase & Firestore
+## 🚀 Getting Started
+1. Clone the repository
+   git clone https://github.com/ChrisEve14/ReactJS.git
+2. Install dependencies
+   npm install
+3. Start the app
+   npm start
 
-## GIF
-
-[Winery GIF](https://www.canva.com/design/DAFLTiDtpv8/VLafIQoe-iqriZ-kOoTxUQ/watch?utm_content=DAFLTiDtpv8&utm_campaign=designshare&utm_medium=link&utm_source=homepage_design_menu)
-
-## Wine & Palette Site
-
-[Site Deployed with Netlify](https://wineandpalette.netlify.app/)
